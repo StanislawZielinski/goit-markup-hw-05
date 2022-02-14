@@ -627,6 +627,9 @@ img {
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   background-color: var(--white-color);
+  animation-name: scale-window;
+  animation-duration: 2000ms;
+  animation-timing-function: linear;
 }
 .close-btn {
   cursor: pointer;
@@ -636,4 +639,30 @@ img {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+.close-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+.icon-close-btn {
+  width: 18px;
+  height: 18px;
+}
+
+@keyframes scale-window {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
